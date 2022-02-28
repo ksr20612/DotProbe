@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST_HOMEPAGE</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/chat.css">
+
+    <!-- SCRIPT -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script src="./script/chat.js"></script>
+</head>
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+    <section class="header">
+        <div class="nav_bar inwrap">
+            <div class="logo">CHATBOT</div>
+            <div class="menu">    
+                <div>소개</div>
+                <div>시작하기</div>
+            </div>
+            <div class="login">로그인</div>
+        </nav>
+    </section>
+    <section class="content">
+        <div class="inwrap">
+            <div class="screen_box">
+                <div class="message_bot" id="message_bot_1">
+                    <div class="bot_img"></div>
+                    <div class="bot">
+                        <div class="bot_name">챗봇</div>
+                        <div class="bot_msg">안녕하세요!</div>
+                    </div>
+                </div>
+                <div class="message_user" id="message_user_1">
+                    <div class="user">
+                        <div class="user_name">???</div>
+                        <div class="user_msg">안녕 챗봇</div>
+                    </div>
+                    <div class="user_img"></div>
+                </div>
+                <!-- <div class="message_bot" id="message_bot_2">
+                    <div class="bot_img"></div>
+                    <div class="bot">
+                        <div class="bot_name">챗봇</div>
+                        <div class="bot_msg">
+                            <div class="loading"></div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            <div class="message_box">
+                <textarea id="message_input" name="message"></textarea> 
+                <div class="sender" onclick="sendMsg()"><div>전송</div></div>
+            </div>
+        </div>
+    </section>
+    <section class="footer">
+        <div class="inwrap">
+            <div class="line title">
+                <div>유동연</div>
+                <div>뭐라뭐라</div>
+            </div>
+            <div class="line">
+                <div class="developer">
+                    <div class="item">
+                        <div class="name">contact</div>
+                        <div class="loc">ksr20612@daum.net</div>
+                    </div>
+                </div>
+                <div class="developer">
+                    <div class="item">
+                        <div class="name">contact</div>
+                        <div class="loc">뭐라뭐라</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>

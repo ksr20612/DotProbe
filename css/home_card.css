@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+
+body {
+    overflow : hidden;
+}
+
+.content {
+    height : 92vh;
+}
+
+.inwrap {
+    height : 92vh; /* header : 8vh */
+}
+
+/* --------- swiper ---------- */ 
+
+.swiper {
+    float : right;
+    width: 20vh;
+    height: 30vh;
+    position : fixed;
+    top : 55vh;
+    right : 15vh;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1.8rem;
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.swiper-slide:nth-child(1n) {
+    background-image: url(../images/3.jpg);
+}
+
+.swiper-slide:nth-child(2n) {
+    background-image: url(../images/5.jpg);
+}
+
+.swiper-slide:nth-child(3n) {
+    background-image: url(../images/7.jpg);
+}
+
+/* --------- background ------------ */
+
+.background {
+    position : fixed;
+    display : unset;
+    top : 8vh;
+    width : 100%;
+    height : 92vh;
+}
+
+.back_info > * {
+    max-width : 1200px;
+    margin : 0 auto;
+    opacity : 0;
+}
+
+/* .back_info.active > * {
+    opacity : 0;
+} */
+
+.back_info {
+    position : fixed;
+    top : 8vh;
+    width : 100%;
+    height : 92vh;
+}
+
+.background .back_info {
+    width : 100%;
+    height : 100%;
+    background-size: cover;
+    background-repeat : no-repeat;
+    background-position : center;
+}
+
+.back_info:nth-child(1){
+	background-image : url(../images/2.jpg);
+    z-index : 1;
+}
+
+.back_info:nth-child(2){
+	background-image : url(../images/4.jpg);
+}
+
+.back_info:nth-child(3){
+	background-image : url(../images/8.jpg);
+}
+
+.back_info > div {
+    position : relative;
+    top : 16vh;
+    color : white;
+    font-weight : bold;
+    font-size : 3rem;
+}
+
+.back_info > p {
+    position : relative;
+    top : 25vh;
+    color : white;
+    font-size : 1.6rem;
+}

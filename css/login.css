@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+
+.main_banner {
+    height : 60rem;
+    display : flex;
+}
+
+.login_area {
+    margin : auto;
+}
+
+.login_area {
+    display : flex;
+}
+
+.login_img {
+    width : 20rem;
+    height : 20rem;
+    background-image : url(../images/login.png);
+    background-size : contain;
+    background-repeat : no-repeat;
+    background-position : center;
+}
+
+.login_img_2 {
+    position : relative;
+    left : -20rem;
+    width : 20rem;
+    height : 20rem;
+    background-size : contain;
+    background-repeat : no-repeat;
+    background-position : center;
+    background-image : url(../images/programming.png);
+    animation-name: FadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-direction: alternate;
+}
+
+.login_box > div {
+    font-size : 1.6rem;
+    font-family: 'Gowun Dodum', sans-serif;
+    margin-bottom : 0.5rem;
+    margin-top : 0.5rem;
+}
+
+.login_box > .login {
+    margin-top : 1.5rem;
+    width : 100%;
+    height : 5rem;
+    background-color : #184EAE;
+    color : white;
+    border-radius : 1rem;
+    font-family: 'Gowun Dodum', sans-serif;
+    font-size : 2rem;
+    display : flex;
+    cursor : pointer;
+}
+
+.login_box > .login > div {
+    margin : auto;
+}
+
+.login_box > .login:hover {
+    background-color :  #184faec2;
+}
+
+input {
+    border : 1px solid rgba(0, 0, 0, 0.3);
+    width : 25rem;
+    height : 2rem;
+    border-radius : 0.5rem;
+    padding : 5px;
+}
+
+input:focus {
+    outline : none;
+    background-color : rgba(0, 0, 0, 0.1);
+}
+
+@keyframes FadeInOut {
+    0% {
+        opacity : 1;
+    }
+    40% {
+        opacity : 1;
+    }
+    60% {
+        opacity : 0;
+    }
+    100% {
+        opacity : 0;
+    }
+}

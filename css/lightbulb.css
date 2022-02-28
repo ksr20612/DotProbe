@@ -1,0 +1,127 @@
+:root {
+	--color-light: 200, 200, 200;
+	--color-dark: 10, 10, 10;
+}
+
+body,
+.bulb {
+	margin: 0;
+	position: relative;
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+	background: transparent;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.bulb {
+	overflow: visible;
+	animation: swing infinite 1s ease-in-out alternate;
+	transform-origin: top;
+}
+
+.bulb-head {
+	position: relative;
+	width: 10vw;
+	height: 10vw;
+	background: radial-gradient(rgb(var(--color-light)), gray);
+	border-radius: 40% 40% 50% 50%;
+	border-radius: 50%;
+	appearance: none;
+	-webkit-appearance: none;
+	outline: none;
+	cursor: pointer;
+	transform-style: preserve-3d;
+}
+
+.bulb-head:checked {
+	background: radial-gradient(yellow, orange);
+	box-shadow: 0 0 50px orange;
+	animation: switchOn 0.5s;
+}
+
+.bulb-head:not(checked) {
+	animation: switchOff 0.5s;
+}
+
+.bulb::before {
+	content: "";
+	position: fixed;
+	width: 5px;
+	height: 50vh;
+	top: 0;
+	left: calc(50% - 2.5px);
+	background: #505050;
+	z-index: -1;
+}
+
+.bulb-head::after {
+	content: "";
+	position: absolute;
+	width: 50%;
+	height: 40%;
+	top: -33%;
+	left: 25%;
+	background: linear-gradient(
+		gray 20%,
+		#505050 20%,
+		#505050 32%,
+		gray 32%,
+		gray 44%,
+		#505050 44%,
+		#505050 56%,
+		gray 56%,
+		gray 68%,
+		#505050 68%,
+		#505050 80%,
+		gray 80%
+	);
+}
+
+@keyframes swing {
+	from {
+		-moz-transform: rotate(50deg);
+		-webkit-transform: rotate(5deg);
+		transform: rotate(5deg);
+	}
+	to {
+		transform: rotate(-5deg);
+	}
+}
+
+@keyframes switchOn {
+	0%,
+	100% {
+		transform: translateY(0px);
+	}
+
+	50% {
+		transform: translateY(50px);
+	}
+}
+
+@keyframes switchOff {
+	0%,
+	100% {
+		transform: translateY(0px);
+	}
+
+	50% {
+		transform: translateY(50px);
+	}
+}
+
+.bg {
+	position: fixed;
+	height: 500%;
+	width: 500%;
+	background: rgb(var(--color-dark));
+	z-index: -2;
+	transition: all 0.4s;
+}
+
+.bulb-head:checked + .bg {
+	background: rgb(var(--color-light));
+}

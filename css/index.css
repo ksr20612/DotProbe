@@ -1,0 +1,80 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+  font-family: "Open Sans", sans-serif;
+  overflow : hidden;
+}
+
+.screen {
+  height : 92vh;
+  width : 100%;
+  border : 1px solid red;
+}
+
+.screen .background {
+  height : 100%;
+}
+
+.row {
+  width : 1200px;
+  display : flex;
+  position : absolute;
+  top : 80vh;
+  justify-content: center;
+}
+
+.card {
+  margin-right : 2rem;
+  width: 20vh;
+  height : 30vh;
+  border-radius : 1rem;
+  background-color : rgba(0,0,0,0.6);
+  background-repeat : no-repeat;
+  background-size : cover; /* contain */
+  background-blend-mode : darken;
+  -webkit-box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.2);
+  cursor : pointer;
+  transition : all 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform : translateY(-20px) scale(1.05);
+}
+
+.card:last-child {
+  margin-right : 0;
+}
+
+.card.active {
+  background-blend-mode : initial;
+}
+
+#card1 {
+  background-image : url(../images/1.jpg);
+}
+
+#card2 {
+  background-image : url(../images/2.jpg);
+}
+
+#card3 {
+  background-image : url(../images/3.jpg);
+}
+
+.card .data .content {
+  color: #fff;
+  padding : 2em 1em 0 1em;
+  position: relative;
+  z-index: 1;
+  display : flex;
+  justify-content : center;
+}
+

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST_HOMEPAGE</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/SST.css">
+
+    <!-- SCRIPT -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="./script/SST.js"></script>
+</head>
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+    <section class="header">
+        <div class="nav_bar inwrap">
+            <div class="logo">CHATBOT</div>
+            <div class="menu">    
+                <div>사전상담챗봇</div>
+                <div>dot-Probe game</div>
+                <div>anxi-VR</div>
+                <div>scrambled sentence game</div>
+            </div>
+            <div class="login">로그인</div>
+        </nav>
+    </section>
+    <section class="content">
+        <div class="inwrap">
+            <div class="score">
+                <div>round : </div>
+                <div class="round">0</div>
+            </div>
+            <div class="screen">
+                <div ondragstart="startDrag(event)" ondrag="drag(event)" ondragend="endDrag(event)">대부분의</div>
+                <div ondragstart="startDrag(event)" ondrag="drag(event)" ondragend="endDrag(event)">즐긴다</div>
+                <div ondragstart="startDrag(event)" ondrag="drag(event)" ondragend="endDrag(event)">피한다</div>
+                <div ondragstart="startDrag(event)" ondrag="drag(event)" ondragend="endDrag(event)">나는</div>
+                <div ondragstart="startDrag(event)" ondrag="drag(event)" ondragend="endDrag(event)">모임을</div>
+                <div ondragstart="startDrag(event)" ondrag="drag(event)" ondragend="endDrag(event)">사교적인</div>
+                <div ondragstart="startDrag(event)" ondrag="drag(event)" ondragend="endDrag(event)">문장</div>
+                <div ondragstart="startDrag(event)" ondrag="drag(event)" ondragend="endDrag(event)">문장</div>
+                <div ondragstart="startDrag(event)" ondrag="drag(event)" ondragend="endDrag(event)">문장</div>
+                <div ondragstart="startDrag(event)" ondrag="drag(event)" ondragend="endDrag(event)">문장</div>
+            </div>
+            <div class="completed_sentence" ondragenter="embrace(event)" ondragover="onElement(event)" ondragleave="offElement(event)" ondrop="dropElement(event)"></div> 
+        </div>
+    </section>
+    <section class="footer">
+        <div class="inwrap">
+            <div class="line title">
+                <div>유동연</div>
+                <div>뭐라뭐라</div>
+            </div>
+            <div class="line">
+                <div class="developer">
+                <div class="item">
+                    <div class="name">contact</div>
+                        <div class="loc">ksr20612@daum.net</div>
+                    </div>
+                </div>
+                <div class="developer">
+                    <div class="item">
+                        <div class="name">contact</div>
+                        <div class="loc">뭐라뭐라</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

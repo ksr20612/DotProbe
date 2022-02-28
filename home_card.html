@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST_HOMEPAGE</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/home_card.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+</head>
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+    <section class="header">
+        <div class="nav_bar inwrap">
+            <div class="logo">PSYBOT</div>
+            <div class="menu">    
+                <div>소개</div>
+                <div>사전상담챗봇</div>
+                <div>Dot-Probe game</div>
+            </div>
+            <div class="login">로그인</div>
+        </nav>
+    </section>
+    <section class="content">
+            <div class="background">
+                <div class="back_info active">
+                    <div>사전상담챗봇</div>
+                    <p>설명1</p>
+                    <p>설명2, 계속 들어갈 수 있음</p> 
+                </div>
+                <div class="back_info">
+                    <div>Dot-Probe game</div>
+                    <p>설명1</p>
+                    <p>설명2, 계속 들어갈 수 있음</p> 
+                </div>
+                <div class="back_info">
+                    <div>ANXI-VR</div>
+                    <p>설명1</p>
+                    <p>설명2, 계속 들어갈 수 있음</p> 
+                </div> 
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">Card 1</div>
+                      <div class="swiper-slide">Card 2</div>
+                      <div class="swiper-slide">Card 3</div>
+                    </div>
+                </div>
+            </div>     
+    </section>
+    <!-- Swiper -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            effect: "cards",
+            grabCursor: true,
+        });
+        swiper.on('transitionEnd', function(){
+            changeBackground(swiper.realIndex);
+        });
+        swiper.on('click', function(){
+            cardShake();
+        })
+    </script>
+    <!-- SCRIPT -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="./script/home_card.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+/* div size */
+*,*:after,*:before{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+    overflow : hidden;
+}
+
+.main_banner {
+	margin: 0;
+	min-height: 100vh; /* full screen : 100% */ 
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+}
+
+.turn_table {
+    position : relative;
+    transform : rotate(0deg);
+    transition : all 0.5s ease-out;
+}
+
+.turn_table * {
+    transition : all 0.5s ease-out;
+}
+
+.card {
+    width : 20rem;
+    height : 20rem;
+    position : absolute;
+}
+.card figure{
+    margin: 0;
+    position : absolute;
+    left : 0;
+    right : 0;
+    bottom : 0;
+    top: 0;
+    background-size : cover;
+    background-blend-mode : darken;
+    background-color : rgba(0,0,0,0.6);
+}
+.description{
+	position: absolute;
+	left: 100%; /* space for the figure */
+	top: 0;
+	bottom: 0;
+	width: 200%;
+	font-size: 1.6rem;
+	padding: 2rem;
+	text-align: justify;
+	color: white;
+	background: #cecece;
+}
+.description h3{ margin: 0 0 2rem; }
+.description p{ margin: 0 }
+.card.active figure{background-blend-mode: initial;}
+.card.active .description{
+	color: rgba(255,255,255,1);
+    background:#184EAE;
+}
+
+.card:nth-child(1){
+	transform: translate(100% ,-50%) rotate(0deg);
+}
+.card:nth-child(2){
+	transform: translate(20% ,-200%) rotate(-60deg);
+}
+.card:nth-child(3){
+	transform: translate(-150% ,-200%) rotate(-120deg);
+}
+.card:nth-child(4){
+	transform: translate(-240% ,-50%) rotate(-180deg);
+}
+.card:nth-child(5){
+	transform: translate(-150% ,100%) rotate(-240deg);
+}
+.card:nth-child(6){
+	transform: translate(20% ,100%) rotate(-300deg);
+}
+
+#card1{
+    background-image : url(../images/1.jpg);
+}
+#card2{
+    background-image : url(../images/2.jpg);
+}
+#card3{
+    background-image : url(../images/3.jpg);
+}
+#card4{
+    background-image : url(../images/4.jpg);
+}
+#card5{
+    background-image : url(../images/5.jpg);
+}
+#card6{
+    background-image : url(../images/6.jpg);
+}
+#card7{
+    background-image : url(../images/7.jpg);
+}
+#card8{
+    background-image : url(../images/8.jpg);
+}

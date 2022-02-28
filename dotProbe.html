@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST_HOMEPAGE</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/dotProbe.css">
+
+    <!-- SCRIPT -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script src="./script/dotProbe.js"></script>
+</head>
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+    <section class="header">
+        <div class="nav_bar inwrap">
+            <div class="logo">CHATBOT</div>
+            <div class="menu">    
+                <div class="menu1">소개</div>
+                <div class="menu2">사전상담챗봇</div>
+                <div class="menu3">Dot-Probe game</div>
+            </div>
+            <div class="login">로그인</div>
+        </nav>
+    </section>
+    <section class="content">
+        <div class="inwrap">
+            <div class="score">
+                <div>round : </div>
+                <div class="round">0</div>
+                <div>score : </div>
+                <div class="score_box">0</div>
+            </div>
+            <div class="myCanvas">
+                <div class="intro">
+                    <div class="intro_text" id="exp">손님이 떠나고 난 자리의 물웅덩이를 청소하고 점수를 획득하세요!</div>
+                    <div class="start" onclick="start()"><div>START</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="footer">
+        <div class="inwrap">
+            <div class="line title">
+                <div>유동연</div>
+                <div>뭐라뭐라</div>
+            </div>
+            <div class="line">
+                <div class="developer">
+                <div class="item">
+                    <div class="name">contact</div>
+                        <div class="loc">ksr20612@daum.net</div>
+                    </div>
+                </div>
+                <div class="developer">
+                    <div class="item">
+                        <div class="name">contact</div>
+                        <div class="loc">뭐라뭐라</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
